@@ -1,18 +1,42 @@
 #include <stdio.h>
+#include "iee357.h"
 
 
 
 
 
 
+//bit mask win
+unsinged int floatohex(char *float[]){
 
-typedef union {
+	 unsigned int float_buff = 0;
 
-	int fromhex;
 
-	float tofloat;
 
-} HexFloat;
+
+	if (float[0] == *"-"){
+
+		float_buff |= 2 << 31;
+
+	}
+
+
+	usigned int exponent = 0;
+		
+
+
+	for (int i = 0; i <= 255; i++){
+
+		if (float[i] == *"."){
+
+
+			exponent += i * 10 * 
+}
+
+
+
+
+
 
 
 
@@ -22,13 +46,13 @@ typedef union {
 int main(){
 
 
-	 HexFloat bytes;
+	 HexFloat hex;
 
-	 bytes.fromhex = 0xffffffff;
+	 hex.fromhex = 0xc0a00000;
 
 
 
-	 printf("%f\n", bytes.tofloat);
+	 printf("%f\n", hex.tofloat);
 
 
 
